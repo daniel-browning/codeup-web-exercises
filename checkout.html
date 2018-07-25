@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+</head>
+<body>
+<form method="POST" action="https://checkout-html.glitch.me/">
+
+    <p><label for="cc_number"><strong>Credit Card Number</strong></label>
+        <input id="cc_number" name="cc_number" type="text" autofocus="autofocus" required placeholder="Enter card number"></p>
+
+    <p><label for="cc_expiration"><strong>Credit Card Expiration</strong></label>
+    <input id="cc_expiration" name="cc_expiration" type="text" required placeholder="MM/YY"></p>
+
+    <p><label for="security_code"><strong>Security Code</strong></label>
+    <input id="security_code" name="security_code" type="password" required placeholder="Three Digit Code"></p>
+    <br>
+
+    <p><label for="billing_street"><strong>Billing Address</strong></label><br>
+        <input id="billing_street" name="billing_street" type="text" required placeholder="Street Address">
+    <br>
+
+    <label for="billing_suite"></label>
+        <input id="billing_suite" name="billing_suite" type="text" required placeholder="APT or Suite">
+
+    <br><br>
+    <label for="city"><strong>City</strong></label>
+        <input id="city" name="city" type="text" required placeholder="City">
+
+    <br><br>
+    <label for="state"><strong>State</strong></label>
+    <input id="state" name="state" type="text" required placeholder="State">
+
+    <br><br>
+    <label for="zip_code"><strong>Zip Code</strong></label>
+    <input id="zip_code" name="zip_code" type="text" required placeholder="Zip Code">
+    </p>
+    <br>
+
+    <input type="checkbox" id="keep_cc" name="keep_cc"
+           value="yes">
+    <label for="keep_cc">Keep this credit card on file for future transactions</label>
+    <br>
+    <br>
+    <input type="submit" value ="Buy Now!">
+
+</form>
+</body>
+</html>

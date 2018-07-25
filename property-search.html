@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Property Search</title>
+</head>
+<body>
+    <form method="POST" action="https://forms-exercises-property-search.glitch.me/">
+
+    <h2>Search for the property of your dreams by selecting the information below:</h2>
+        <label for="property_type"><strong>What kind of property are you searching for?</strong> </label><br>
+        <select id="property_type" name="property_type">
+            <option value="single_family_house">Single Family House</option>
+            <option value="apartment">Apartment</option>
+            <option value="condo">Condominium</option>
+            <option value="loft">Loft</option>
+        </select>
+        <br>
+        <br>
+
+        <label for="square_footage"><strong>How many square feet are you looking for?</strong> </label><br>
+        <select id="square_footage" name="square_footage">
+            <option value="below_500">Below 500 sqft</option>
+            <option value="501_1000">501 sqft to 1,000 sqft</option>
+            <option value="1001_2000">1,001 sqft to 2,000 sqft</option>
+            <option value="2001_3000">2,001 sqft to 3,000 sqft</option>
+            <option value="3000_plus">Over 3,000 sqft</option>
+        </select>
+        <br>
+        <br>
+
+        <label for="bedrooms"><strong>How many bedrooms are you looking for?</strong> </label><br>
+        <select id="bedrooms" name="bedrooms">
+            <option value="one">1</option>
+            <option value="two">2</option>
+            <option value="three">3</option>
+            <option value="four_or_more">4 or more</option>
+        </select>
+        <br>
+        <br>
+
+        <label for="bathrooms"><strong>How many bathrooms are you looking for?</strong> </label><br>
+        <select id="bathrooms" name="bathrooms">
+            <option value="one">1</option>
+            <option value="two">2</option>
+            <option value="three_or_more">3 or more</option>
+        </select>
+
+        <p><strong>Will you have any pets?</strong> Select all that apply:</p>
+            <label>
+                <input type="radio" name="q1" value="dog">Dog
+                <br>
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="cat">Cat
+                <br>
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="small_caged">Small pet in cage
+                <br>
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="exotic">Exotic
+                <br>
+            </label>
+
+        <p><label for="min_price"><strong>Minimum Monthly Price</strong></label>
+            <input id="min_price" name="min_price" type="number" min="0" placeholder="Enter minimum price">
+            <label for="max_price"><strong>Maximum Monthly Price</strong></label>
+            <input id="max_price" name="max_price" type="number" max="1,000,000,000" placeholder="Enter maximum price"></p>
+        <p><label for="zip_code"><strong>Desired Zip Code</strong></label>
+            <input id="zip_code" name="zip_code" type="number" placeholder="Enter Zip Code">
+        <br>
+        <br>
+        <input type="submit" value ="Search Now">
+    </form>
+
+</body>
+</html>
