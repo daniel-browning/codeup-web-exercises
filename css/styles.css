@@ -1,0 +1,59 @@
+body {
+    background-color: #0B0C10;
+    background-image: url("https://lotsa.com/wp-content/uploads/2017/10/cast-iron-background.jpg");
+    /*Theme courtesy of http://blog.visme.co/website-color-schemes/ */
+    color: #C5C6C7;
+    font-family: "Almendra";
+}
+
+h1.fancy-header {
+    color: azure;
+    text-decoration: underline;
+    text-align: center;
+    font-family: "Aldrich";
+}
+
+h2.fancy-header {
+    color: #45A298;
+    text-decoration: underline;
+    background-color: #1F2833;
+    font-family: "Aldrich";
+}
+
+p {
+    font-size: 1.2em;
+}
+
+.ul_style {
+    list-style: square;
+}
+
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+table {
+    width: 50%;
+}
+
+th {
+    height: 50px;
+}
+
+tr:hover {
+    background-color:#1F2833;
+}
+
+a:link {
+    color: #66FCF1;
+}
+
+a:visited {
+    color: #45A298;
+}
+
+a:hover {
+    color: lightgray;
+}
