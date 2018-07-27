@@ -4,47 +4,41 @@ body, html {
     padding: 5px;
     margin: 0;
     font-family: Arial, Ubuntu, sans-serif;
-}
 
-.message-info {
-    color: darkblue;
-    background: powderblue;
+    --text-info: #49489c;
+    --bg-info: #D0DEFC;
+    --text-success: #558960;
+    --bg-success: #D5F2DC;
+    --text-warning: #a5984f;
+    --bg-warning: #fcface;
+    --text-error: #7b2936;
+    --bg-error: #f4d4d7;
+}
+.message {
     padding: 0.5em;
     border: 1px;
-    --border-color: lightgray;
     margin: 10px;
+    border-radius: 10px;
     --box-shadow-color: lightgray;
     box-shadow: 1px 1px 1px 1px var(--box-shadow-color);
-
+}
+.message-info {
+    color: var(--text-info);
+    background: var(--bg-info);
 }
 
 .message-success {
-    color: green;
-    background: palegreen;
-    padding: 0.5em;
-    border: 1px var (--border-color);
-    margin: 10px;
-    --box-shadow-color: lightgray;
-    box-shadow: 1px 1px 1px 1px var(--box-shadow-color);
+    color: var(--text-success);
+    background: var(--bg-success);
 }
 
 .message-warning {
-    color: goldenrod;
-    background: lightyellow;
-    padding: 0.5em;
-    border: 1px var (--border-color);
-    margin: 10px;
-    --box-shadow-color: lightgray;
-    box-shadow: 1px 1px 1px 1px var(--box-shadow-color);
+    color: var(--text-warning);
+    background: var(--bg-warning);
 }
 
 .message-error {
-    color: darkred;
-    background: lightpink;
-    padding: 0.5em;
-    border: 1px var (--border-color);
-    margin: 10px;
-    --box-shadow-color: lightgray;
-    box-shadow: 1px 1px 1px 1px var(--box-shadow-color);
+    color: var(--text-error);
+    background: var(--bg-error);
 
 }
