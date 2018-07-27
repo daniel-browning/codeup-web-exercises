@@ -14,7 +14,7 @@ form {
     /* This form should be separated from other elements by 1em */
     margin: 1em;
     /* There must be 1em between the content and the border of this element */
-    border: 1em;
+    padding: 1em;
 }
 
 fieldset {
@@ -23,13 +23,15 @@ fieldset {
     box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
     background-color: #FFFFFF;
     border: 0px;
+    padding: 1em;
     /* There must be 1em between the content and the border of this element */
     /* It should have no border */
     /* Its background should be white */
 }
 
 .width-80 {
-    width: 80%;
+    width: 528px;
+    margin: auto;
     display: -webkit-flex;
     display:         flex;
     -webkit-align-items: center;
