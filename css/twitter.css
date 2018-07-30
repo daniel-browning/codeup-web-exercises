@@ -78,6 +78,7 @@ a {
 
 .profile-items {
     padding: 0;
+    list-style: none;
 }
 
 .container {
@@ -101,8 +102,7 @@ a {
 .media {
     width: 100%;
     background: var(--light-bg);
-    border-bottom: 1px var(--separator-color);
-    border-bottom-style: solid;
+    border-bottom: 1px var(--separator-color) solid;
     overflow: hidden;
     padding: 0.5em;
 }
