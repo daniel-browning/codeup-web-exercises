@@ -6,6 +6,7 @@
         width: 60%;
         margin: 2em;
         padding: 1em;
+        vertical-align: middle;
 
     }
 
@@ -32,6 +33,7 @@
         width: 80%;
         list-style: none;
         display: block;
+        vertical-align: middle;
     }
 
     img {
@@ -54,6 +56,18 @@
 
     footer {
         text-align: left;
+    }
+
+    .social-media-links {
+        display: none;
+    }
+
+    .social {
+        display: none;
+    }
+
+    .tumblr {
+        display: none;
     }
 
 }
@@ -107,7 +121,28 @@
     }
 
     footer {
-        clear: left;
+        clear: both;
         padding: 100px 0 0 0;
     }
+
+    .social-media-links {
+
+    }
+
+    .social {
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        float: right;
+        margin: 0.1em;
+    }
+
+    .tumblr {
+        width: 50px;
+        height: 50px;
+        float: right;
+        margin: 0.1em;
+    }
+
 }
+
