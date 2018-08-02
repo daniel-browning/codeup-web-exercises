@@ -1,0 +1,32 @@
+.jumbotron {
+    text-align: center;
+    background: url(http://java.codeup.com/examples/bootstrap/pizza.png) repeat;
+    width: 100%;
+}
+
+h1.transbox {
+    width: 100%;
+    background-color: #fcf6ea;
+    opacity: 0.8;
+    font-weight: bold;
+    color: #6e6b5e;
+    margin: auto;
+}
+
+.card-header {
+    background: #f7f7f7;
+}
+
+p.btn {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+.login-part {
+    margin-left: 350px;
+}
+
+.list-group-item {
+    return: false;
+}

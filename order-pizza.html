@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pizza World Bootstrap Exercise</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-light" style="background-color: #f8f8f8;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link nav-pizza" href="#">Pizza World <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Order Online</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Menu <span class="sr-only"></span></a>
+            </li>
+        </ul>
+        <nav class="navbar navbar-light bg-light">
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search Zip Code" aria-label="Search">
+                <button class="btn btn-sm btn-outline-secondary" type="button">Search stores near you!</button>
+            </form>
+        </nav>
+        <span class="login-part"><i class="fas fa-user mr-sm-2"></i>Sign Up</span>
+    </div>
+</nav>
+</nav>
+
+<div class="container-fluid">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4 transbox background">Welcome to Pizza World!</h1>
+        </div>
+    </div>
+    <h2>Build your own pizza!</h2>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="#" <button type="button" class="btn btn-primary"><span class="badge badge-light">1</span>Size and Crust</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="#" <button type="button" class="btn btn-primary"><span class="badge badge-light">2</span>Cheese and Sauce</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" <button type="button" class="btn btn-primary"><span class="badge badge-light">3</span>Toppings</a>
+        </li>
+    </ul>
+    <div class="card">
+        <div class="card-body">
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action active">
+                    Choose size and crust
+                </a>
+                <a href="#!" class="list-group-item list-group-item-action card-header">Hand Tossed</a>
+                <a href="#!" class="list-group-item list-group-item-action">Garlic seasoned crust with a rich, buttery taste</a>
+                <a href="#!" class="list-group-item list-group-item-action">
+                    <input type="radio" name="pizza-size" id="pizza-size-10" value="option1">
+                    <label class="form-check-label" for="pizza-size-10">Small (10")</a>
+                <a href="#!" class="list-group-item list-group-item-action">
+                    <input type="radio" name="pizza-size" id="pizza-size-12" value="option1">
+                    <label class="form-check-label" for="pizza-size-12">Medium (12")</a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="card">
+        <div class="card-body">
+            <div class="list-group">
+                <a href="#!" class="list-group-item list-group-item-action card-header">Crispy Thin</a>
+                <a href="#!" class="list-group-item list-group-item-action">Thin enough for optimum crispy to crunchy ratio</a>
+                <a href="#!" class="list-group-item list-group-item-action">
+                    <input type="radio" name="pizza-size" id="pizza-size-10" value="option1">
+                    <label class="form-check-label" for="pizza-size-10">Medium (12")</a>
+                <a href="#!" class="list-group-item list-group-item-action">
+                    <input type="radio" name="pizza-size" id="pizza-size-12" value="option1">
+                    <label class="form-check-label" for="pizza-size-12">Large (14")</a>
+            </div>
+            <p class="text-right"><button type="submit" class="btn btn-primary text-right">Next Step></button>
+            <br>
+            <div class="card">
+                <div class="card-body">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action active">
+                            Choose cheese and sauce
+                        </a>
+                        <a href="#!" class="list-group-item list-group-item-action card-header">Cheese</a>
+                        <a href="#!" class="list-group-item list-group-item-action">How much?</a>
+                        <a href="#!" class="list-group-item list-group-item-action">
+                            <select class="custom-select custom-select-sm">
+                                <option selected>Normal</option>
+                                <option value="1">Light</option>
+                                <option value="2">Extra</option>
+                                <option value="3">Double</option>
+                            </select>
+                            <br>
+                            <a href="#!" class="list-group-item list-group-item-action card-header">Sauce</a>
+                            <a href="#!" class="list-group-item list-group-item-action">What kind?</a>
+                                <select class="custom-select custom-select-sm">
+                                    <option selected>Tomato Sauce</option>
+                                    <option value="1">Marinara Sauce</option>
+                                    <option value="2">BBQ Sauce</option>
+                                    <option value="3">ALfredo Sauce</option>
+                                </select>
+                                <a href="#!" class="list-group-item list-group-item-action">How much?</a>
+                                    <select class="custom-select custom-select-sm">
+                                        <option selected>Normal</option>
+                                        <option value="1">Light</option>
+                                        <option value="2">Extra</option>
+                                    </select>
+                    </div>
+                </div>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary">< Previous</button>
+                <button type="button" class="btn btn-secondary">Next ></button>
+            </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-body">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action active">
+                            Choose toppings
+                        </a>
+                        <br>
+                        <a href="#!" class="list-group-item list-group-item-action card-header">Choose meats</a>
+                        <a href="#!" class="list-group-item list-group-item-action">
+                            <input type="radio" name="pizza-topping-1" id="pizza-topping-1" value="option1">
+                            <label class="form-check-label" for="pizza-topping-1">Beef</a>
+                            </label>
+                            <a href="#!" class="list-group-item list-group-item-action">
+                            <input type="radio" name="pizza-topping-2" id="pizza-topping-2" value="option2">
+                                <label class="form-check-label" for="pizza-topping-2">Ham</a>
+                            </label>
+                            <a href="#!" class="list-group-item list-group-item-action">
+                            <input type="radio" name="pizza-topping-3" id="pizza-topping-3" value="option3">
+                            <label class="form-check-label" for="pizza-topping-3">Philly Steak</a>
+                            </label>
+                                <a href="#!" class="list-group-item list-group-item-action">
+                            <input type="radio" name="pizza-topping-4" id="pizza-topping-4" value="option4">
+                            <label class="form-check-label" for="pizza-topping-4">Bacon</a>
+                            </label>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="list-group">
+                        <br>
+                        <a href="#!" class="list-group-item list-group-item-action card-header">Choose Non-Meats</a>
+                        <a href="#!" class="list-group-item list-group-item-action">
+                            <input type="radio" name="pizza-topping-1" id="pizza-topping-1" value="option1">
+                            <label class="form-check-label" for="pizza-size-10">Green Peppers</a>
+                        </label>
+                        <a href="#!" class="list-group-item list-group-item-action">
+                            <input type="radio" name="pizza-topping-2" id="pizza-topping-2" value="option2">
+                            <label class="form-check-label" for="pizza-size-12">Mushrooms</a>
+                        </label>
+                        <a href="#!" class="list-group-item list-group-item-action">
+                            <input type="radio" name="pizza-topping-3" id="pizza-topping-3" value="option3">
+                            <label class="form-check-label" for="pizza-size-10">Onions</a>
+                        </label>
+                        <a href="#!" class="list-group-item list-group-item-action">
+                            <input type="radio" name="pizza-topping-4" id="pizza-topping-4" value="option4">
+                            <label class="form-check-label" for="pizza-size-10">Jalapeño Peppers</a>
+                        </label>
+                    </div>
+                </div>
+            <p class="text-right"><button type="submit" class="btn btn-primary text-right">Checkout</button>
+
+
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

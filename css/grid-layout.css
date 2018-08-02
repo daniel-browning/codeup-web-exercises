@@ -31,22 +31,23 @@ li {
 }
 
 img {
-    width: 890px;
+    max-width: 100%;
+}
+
+.column.full {
+    width: 100%;
 }
 
 .column.one-third {
     width: 33.33%;
-
 }
 
 .column.one-fourth {
     width: 25%;
-
 }
 
 .column.one-eighth {
     width: 12.50%;
-
 }
 
 .social {
@@ -60,7 +61,8 @@ img {
     .column.one-third,
     .column.one-half,
     .column.one-fourth,
-    .column.one-eighth {
+    .column.one-eighth
+    .column.full {
         width: 100%;
     }
 
@@ -72,8 +74,7 @@ img {
     }
 
     img {
-        width: 3339px;
-
+        max-width: 100%;
     }
 
     body {
@@ -82,12 +83,11 @@ img {
 
     .hidden-on-desktop {
         visibility: visible;
-        position: absolute;
+        margin: auto;
         right: 120px;
         background-color: #d5fefe;
         border: 2px solid #f1f1f1;
         padding: 2px;
-        margin: 2px;
         width: 60%;
         font-family: sans-serif;
         color: #848487;
@@ -96,6 +96,7 @@ img {
    .column.one-third {
        margin: auto;
    }
+
    p {
        text-align: left;
    }
@@ -107,6 +108,5 @@ img {
 
    .social {
     display: inline-block;
-
    }
 }
