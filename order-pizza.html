@@ -53,22 +53,21 @@
     <h2>Build your own pizza!</h2>
     <ul class="nav nav-tabs">
         <li class="nav-item">
-            <a class="nav-link active" href="#" <button type="button" class="btn btn-primary"><span class="badge badge-light">1</span>Size and Crust</a>
-        </li>
-
-        <li class="nav-item">
-            <a class="nav-link" href="#" <button type="button" class="btn btn-primary"><span class="badge badge-light">2</span>Cheese and Sauce</a>
+            <a class="nav-link active" href="#size_crust"<button type="button" class="btn btn-primary"><span class="badge badge-light">1</span>Size and Crust</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#" <button type="button" class="btn btn-primary"><span class="badge badge-light">3</span>Toppings</a>
+            <a class="nav-link" href="#cheese_sauce"<button type="button" class="btn btn-primary"><span class="badge badge-light">2</span>Cheese and Sauce</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#toppings" <button type="button" class="btn btn-primary"><span class="badge badge-light">3</span>Toppings</a>
         </li>
     </ul>
     <div class="card">
         <div class="card-body">
             <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action active">
+                <div id="size_crust" class="list-group-item list-group-item-action active">
                     Choose size and crust
-                </a>
+                </div>
                 <a href="#!" class="list-group-item list-group-item-action card-header">Hand Tossed</a>
                 <a href="#!" class="list-group-item list-group-item-action">Garlic seasoned crust with a rich, buttery taste</a>
                 <a href="#!" class="list-group-item list-group-item-action">
@@ -79,7 +78,6 @@
                     <label class="form-check-label" for="pizza-size-12">Medium (12")</a>
             </div>
         </div>
-    </div>
     <br>
     <div class="card">
         <div class="card-body">
@@ -92,53 +90,56 @@
                 <a href="#!" class="list-group-item list-group-item-action">
                     <input type="radio" name="pizza-size" id="pizza-size-12" value="option1">
                     <label class="form-check-label" for="pizza-size-12">Large (14")</a>
-            </div>
             <p class="text-right"><button type="submit" class="btn btn-primary text-right">Next Step></button>
-            <br>
+            </div>
+        </div>
+    </div>
             <div class="card">
                 <div class="card-body">
                     <div class="list-group">
-                        <a href="#" class="list-group-item list-group-item-action active">
+                        <div id="cheese_sauce" class="list-group-item list-group-item-action active">
                             Choose cheese and sauce
-                        </a>
+                        </div>
+                        <br>
                         <a href="#!" class="list-group-item list-group-item-action card-header">Cheese</a>
-                        <a href="#!" class="list-group-item list-group-item-action">How much?</a>
-                        <a href="#!" class="list-group-item list-group-item-action">
+                        <li class="list-group-item list-group-item-action">How much?</a>
                             <select class="custom-select custom-select-sm">
                                 <option selected>Normal</option>
                                 <option value="1">Light</option>
                                 <option value="2">Extra</option>
                                 <option value="3">Double</option>
                             </select>
-                            <br>
+                        </li>
+                        </div>
+<br>
                             <a href="#!" class="list-group-item list-group-item-action card-header">Sauce</a>
-                            <a href="#!" class="list-group-item list-group-item-action">What kind?</a>
+                            <li class="list-group-item list-group-item-action">What kind?</a>
                                 <select class="custom-select custom-select-sm">
                                     <option selected>Tomato Sauce</option>
                                     <option value="1">Marinara Sauce</option>
                                     <option value="2">BBQ Sauce</option>
                                     <option value="3">ALfredo Sauce</option>
                                 </select>
-                                <a href="#!" class="list-group-item list-group-item-action">How much?</a>
+                                <li class="list-group-item list-group-item-action">How much?</a>
                                     <select class="custom-select custom-select-sm">
                                         <option selected>Normal</option>
                                         <option value="1">Light</option>
                                         <option value="2">Extra</option>
                                     </select>
+                            </li>
                     </div>
-                </div>
-            <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-secondary">< Previous</button>
-                <button type="button" class="btn btn-secondary">Next ></button>
+            <div class="btn-group text-right" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-primary text-right">< Previous</button>
+                <button type="button" class="btn btn-primary text-right">Next ></button>
             </div>
             </div>
             <br>
             <div class="card">
                 <div class="card-body">
                     <div class="list-group">
-                        <a href="#" class="list-group-item list-group-item-action active">
+                        <div id="toppings" class="list-group-item list-group-item-action active">
                             Choose toppings
-                        </a>
+                        </div>
                         <br>
                         <a href="#!" class="list-group-item list-group-item-action card-header">Choose meats</a>
                         <a href="#!" class="list-group-item list-group-item-action">
@@ -181,7 +182,7 @@
                         </label>
                     </div>
                 </div>
-            <p class="text-right"><button type="submit" class="btn btn-primary text-right">Checkout</button>
+            <p class="text-right"><button type="submit" class="btn btn-primary text-right">Checkout<i class="fas fa-shopping-cart"></i></button>
 
 
 
