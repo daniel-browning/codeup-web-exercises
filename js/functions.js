@@ -103,17 +103,13 @@ console.log(isTwo(random));
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
-// function calculateTip() {
-//     var totalBill =
-//     return
-// }
-
-/* function calculateTip(tipPercentage, billTotal) {
-* console.log(calculateTip(0.20, 20) + " should return 4");
-* console.log(calculateTip(0.25, 25.50) + " should return 6.37";
-* console.log(calculateTip(0.15, 33.42) + " should return 5.01";
+function calculateTip(totalBill, tipPercentage) {
+    var tip = totalBill * tipPercentage;
+    return tip;
 }
- */
+console.log(calculateTip(0.20, 20) + " should return 4");
+console.log(calculateTip(0.25, 25.50) + " should return 6.37");
+console.log(calculateTip(0.15, 33.42) + " should return 5.01");
 
 
 /**
@@ -124,18 +120,12 @@ console.log(isTwo(random));
  */
 
 
+var totalBill = parseFloat(prompt("How much was your total bill?"));
+    // console.log(billTotal);
+    // console.log(typeof billTotal);
+var tipPercentage = parseFloat(prompt("How much would you like to tip (decimal between 0-1)?"));
+alert("The recommended tip amount is $" + calculateTip(totalBill, tipPercentage).toFixed(2));
 
-var totalBill = prompt("How much was your total bill?");
-var tipPercentage = prompt("What percentage would you like to tip?");
-
-function calculateTip(totalBill, tipPercentage) {
-    return totalBill, tipPercentage;
-}
-var tipAmount = calculateTip(totalBill*tipPercentage);
-console.log(calculateTip(0.20, 20) + " should return 4");
-console.log(calculateTip(0.25, 25.50) + " should return 6.37");
-console.log(calculateTip(0.15, 33.42) + " should return 5.01");
-alert("The recommended tip amount is $" + tipAmount);
 
 
 /**
@@ -152,3 +142,16 @@ alert("The recommended tip amount is $" + tipAmount);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+
+
+function applyDiscount(price, discountPercent) {
+    var discount = price * discountPercent;
+    return price - discount;
+
+}
+
+var originalPrice = 100;
+var discountPercent = .2;
+console.log(applyDiscount(originalPrice, discountPercent));
+console.log(applyDiscount(45.99, 0.12));
