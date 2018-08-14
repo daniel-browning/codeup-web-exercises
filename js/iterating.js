@@ -1,4 +1,4 @@
-(function(){
+(function(){ //this is an IIFE, all inside of a scope
     "use strict";
 
     /**
@@ -6,6 +6,8 @@
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */
+
+    //an array of strings
 
     var names = ["Daniel", "Aaron", "Susan", "Ruben"];
 
