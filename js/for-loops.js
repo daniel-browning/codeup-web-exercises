@@ -29,8 +29,6 @@ for(var i = 1; i <= 9; i++) {
     console.log(output);
 }
 
-var output;
-for(var i = 100; i > 5; i-=5) {
-    output = i;
+for(var i = 100; i >= 5; i-=5) {
+    console.log(i);
     }
-    console.log(output -5);
