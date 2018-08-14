@@ -1,5 +1,13 @@
 "use strict";
 
+var hitMe = function() {
+    return Math.floor((Math.random() *( 11)+1))
+}
+var count = 0;
+    if (confirm("Do you want to play a game hehe?")) {
+
+}
+
 /**
  * TODO:
  * Create a function called 'sayHello' that takes a parameter 'name'.
