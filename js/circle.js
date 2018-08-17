@@ -16,11 +16,10 @@
 
         logInfo: function (doRounding) {
             var areaOfCircle = Math.PI * Math.pow(circle.radius, 2);
-            if (doRounding === false) {
-                console.log("Raw circle information is " + areaOfCircle);
+            if (doRounding) {
+                console.log("Circle information rounded to the nearest whole number is " + Math.round(this.getArea()));
             } else {
-                (doRounding === true)
-                    console.log("Circle information rounded to the nearest whole number is " + Math.round(areaOfCircle));
+                console.log("Raw circle information is " + this.getArea());
             }
 
             // TODO: complete this method.
@@ -55,11 +54,10 @@
 
         logInfo: function (doRounding) {
             var areaOfCircle = Math.PI * Math.pow(circle.radius, 2);
-            if (doRounding === false) {
-                console.log("Raw circle information is " + areaOfCircle);
+            if (doRounding) {
+                console.log("Circle information rounded to the nearest whole number is " + Math.round(this.getArea()));
             } else {
-                (doRounding === true)
-                console.log("Circle information rounded to the nearest whole number is " + Math.round(areaOfCircle));
+                console.log("Raw circle information is " + this.getArea());
             }
 
             // TODO: complete this method.
