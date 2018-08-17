@@ -50,11 +50,44 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {
+            name: 'Cameron',
+            amount: 180
+        },
+        {
+            name: 'Ryan',
+            amount: 250
+        },
+        {
+            name: 'George',
+            amount: 320
+        }
+    ];
+
+    var discount = 12 / 100;
+    var discountAmount = shoppers[1].amount - (shoppers[1].amount * discount);
+
+    if (shoppers.amount < 200) {
+        console.log(shoppers.name + " does not qualify for a discount.");
+    } else {
+        (shoppers.amount > 200)
+        console.log(shoppers.name + " does not qualify for a discount.");
+        }
+
+
+    console.log("The first shopper is named " + shoppers[0].name + " and before the discount he spent $" + shoppers[0].amount + ".");
+    console.log("The second shopper is named " + shoppers[1].name + " and before the discount he spent $" + shoppers[1].amount + ". "  +  shoppers[1].name + " owes a total of $" + discountAmount + ".");
+    console.log("The third shopper is named " + shoppers[2].name + " and before the discount he spent $" + shoppers[2].amount + ".");
+
+    //shoppers.amount - (shoppers.amount * 0.12)
+    //if shoppers.amount >= 200
+    /*if/else example
+    if (condition) {
+        // code here gets executed if condition evaluates to true
+    } else {
+        // code here gets executed if condition evaluates to false
+    } */
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -68,6 +101,54 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    var books = [
+        {
+            title: 'Harry Potter',
+            author:
+                {firstName: 'J.k',
+                lastName: 'Rowling'
+                },
+            genre: 'Fiction'
+        },
+        {
+            title: 'What I Know For Sure',
+            author:
+                {firstName: 'Oprah',
+                lastName: 'Winfrey'
+                },
+            genre: 'Nonfiction'
+        },
+        {
+            title: 'The Love Fix',
+            author:
+                {firstName: 'Tara',
+                lastName: 'Fields'
+                },
+            genre: 'Nonfiction'
+        },
+        {
+            title: 'The Perks of Being a Wallflower',
+            author:
+                {firstName: 'Stephen',
+                lastName: 'Chbosky'
+                },
+            genre: 'Fiction'
+        },
+        {
+            title: 'What Makes Love Last?',
+            author:
+                {firstName: 'John',
+                    lastName: 'Gottman'
+                },
+            genre: 'Nonfiction'
+        }
+];
+
+   // books.forEach(function (book) {
+       // console.log(book.title);
+    //});
+
 
     /**
      * TODO:
@@ -94,6 +175,19 @@
      *      ...
      */
 
+    var bookListing = function (book, id) {
+        console.log("Book # " + id);
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+    };
+
+    // bookListing(books[3], 3); //test
+
+    books.forEach(function (book, id) {
+        bookListing (book, id+1);
+    });
+
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -104,5 +198,33 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    var createBook = function (title, author) {
+        var book = {};
+        book.title = title;
+        if (typeof author === "string") {
+            var names = author.split(" ");
+            var authObj = {
+                firstName: names[0],
+                lastName: names[1]
+            }
+            book.author = authObj;
+
+        } else if (typeof author === "object") {
+            book.author = author;
+        }
+
+        return book;
+    }
+    console.log(createBook("Harry Potter", "J.K Rowling"));
+
+    var showBookInfo= function (book, id) {
+        console.log("Book # " + id);
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+    };
+    books.forEach(function(book, id) {
+        showBookInfo (book, id+1)
+    })
 
 })();
