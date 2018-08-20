@@ -13,7 +13,7 @@
     (function() {
         "use strict";
 
-        var count = 6;
+        var count = 5;
         var max = 1;
         var interval = 1000; // interval time in milliseconds
 
@@ -23,7 +23,7 @@
                 alert('EXTERMINATE!');
             } else {
                 count--;
-                console.log('Counting ' + count);
+                document.getElementById('timer').innerHTML = count;
             }
         }, interval);
 
