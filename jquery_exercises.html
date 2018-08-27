@@ -6,9 +6,22 @@
 </head>
 <body>
 
-<h1>jQuery Web Exercise</h1>
+<h1 class = "codeup">Disney World!</h1>
 
-<p>Adding an alert to say the DOM has finished loading by downloading jQuery and linking it from the js folder.</p>
+<h2 class = "codeup">I can't wait!</h2>
+
+<div class = "div-body">
+
+    <p id = "disney-paragraph">I cannot wait to go to Disney World next year in 2019! I definitely want to see the following:</p>
+
+    <ul class = "reasons-list codeup" id = "test-id">
+        <li>I want to see the infamous Disney castle!</li>
+        <li>I also cannot wait to shop in the gift shops.</li>
+        <li>Taking photos will be a priority!</li>
+    </ul>
+
+    <p id = "codeup">Mickey Mouse is legendary.</p>
+</div>
 
 <!-- jQuery CDN -->
 <script src="js/jquery-2.2.4.js"></script>
@@ -16,9 +29,18 @@
 <script>
     "use strict";
 
-    $(document).ready(function() {
-        alert( 'The DOM has finished loading!' );
-    });
+    // $(document).ready(function() {
+    //     alert( 'The DOM has finished loading!' );
+    // });
+
+    // $(".codeup").css("border", "1px solid #F00");
+
+    $("li").css("font-size", "20px");
+    $("h1", "p", "li");
+
+    var contents = $("#codeup").html();
+    alert(contents)
+
 </script>
 
 </body>
