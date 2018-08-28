@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+    <style>
+        img {
+            display:;
+            height: 800px;
+        }
+
+        body {
+            background-color: azure;
+        }
+
+        .disneyCastle {
+            background-image: url("https://wallpapercave.com/wp/am7htsQ.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            color: red;
+            text-align: center;
+        }
+
+        #excitedMickey {
+            content:url("https://www.thehappiestblogonearth.net/wp-content/uploads/2016/03/IMG_6586.gif");
+            display: none;
+            position:fixed;
+            width: 150px;
+            height: auto;
+            left:50%;
+            bottom:30px;
+            background-position:0px -178px;
+            z-index:1000;
+        }
+
+    </style>
+</head>
+<body class = "disneyCastle">
+<h1>Konami Code</h1>
+
+
+<img id="excitedMickey" src="https://www.thehappiestblogonearth.net/wp-content/uploads/2016/03/IMG_6586.gif">
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    "use strict";
+
+    var secretKeys = {
+        37: 'left',
+        38: 'up',
+        39: 'right',
+        40: 'down',
+        65: 'a',
+        66: 'b'
+    };
+
+
+    var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
+
+    var konamiCodePosition = 0;
+
+    document.addEventListener('keyup', function(e) {
+
+        var key = secretKeys[e.keyCode];
+
+        var requiredKey = konamiCode[konamiCodePosition];
+
+        if (key === requiredKey) {
+
+            konamiCodePosition++;
+
+            if (konamiCodePosition === konamiCode.length) {
+                activateKey();
+                konamiCodePosition = 0;
+            }
+        } else {
+            konamiCodePosition = 0;
+        }
+    });
+
+    function activateKey() {
+        document.body.style.backgroundImage = "url('https://www.thehappiestblogonearth.net/wp-content/uploads/2016/03/IMG_6586.gif')";
+
+        var audio = new Audio("mickey-oh.mp3");
+        audio.play();
+
+        alert("Congratulations! You've won a no expenses paid trip to Disney World!");
+
+    }
+
+    // $(document).keyup(function(event){
+    //     console.log(event.keyCode);
+    // });
+</script>
+</body>
+</html>
