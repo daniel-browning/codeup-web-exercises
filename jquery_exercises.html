@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>jQuery Exercise</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
-<h1 class = "codeup">Disney World!</h1>
+<h1 id ="disney">Disney World!</h1>
 
-<h2 class = "codeup">I can't wait!</h2>
+<h2>I can't wait!</h2>
 
-<div class = "div-body">
+<div class ="div-body">
 
     <p id = "disney-paragraph">I cannot wait to go to Disney World next year in 2019! I definitely want to see the following:</p>
 
-    <ul class = "reasons-list codeup" id = "test-id">
+    <ul id = "list">
         <li>I want to see the infamous Disney castle!</li>
         <li>I also cannot wait to shop in the gift shops.</li>
         <li>Taking photos will be a priority!</li>
@@ -34,12 +39,29 @@
     // });
 
     // $(".codeup").css("border", "1px solid #F00");
+    //
+    // $("li").css("font-size", "20px");
+    // $("h1", "p", "li");
+    //
+    // var contents = $("#codeup").html();
+    // alert(contents)
 
-    $("li").css("font-size", "20px");
-    $("h1", "p", "li");
+    $("#disney").hover(function () {
+        $("h1").css("background-color", "red");
+    });
 
-    var contents = $("#codeup").html();
-    alert(contents)
+    $("p").on("dblclick", function () {
+        $("p").css("font-size", "18px");
+    });
+
+    $("#list").hover(function () {
+        $("li").css("color", "red");
+    });
+
+    $("#list").mouseout(function () {
+        $("li").css("color", "black");
+    });
+
 
 </script>
 
