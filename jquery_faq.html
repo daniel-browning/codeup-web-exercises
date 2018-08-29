@@ -3,71 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <title>National Parks FAQ</title>
-
+    <link href="https://fonts.googleapis.com/css?family=Crete+Round|Marck+Script" rel="stylesheet">
     <style>
+
 
         .invisible {
             display: none;
         }
 
+        .title {
+            text-align: center;
+            color: #0fb784;
+            font-family: 'Marck Script', cursive;
+        }
+
+        body {
+            background-color: aliceblue;
+            font-family: 'Crete Round', serif;
+        }
+
+        .selected {
+            font-weight: bold;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
 
     </style>
+
 </head>
 <body>
 
-<h1>National Parks FAQ</h1>
+<h1 class="title">National Parks FAQ</h1>
 
 <div class = "questionGroup">
+
+    <button id ="toggleButton">What are the answers?</button>
 
     <dl class ="listClass">
 
         <dt class ="questions">How many people visit national parks?</dt>
-        <dd class ="invisible">In 2017, 330,882,751 visited national parks.</dd>
+        <dd class ="answers">In 2017, 330,882,751 visited national parks.</dd>
         <br>
         <dt class ="questions">Which national park is the busiest park?</dt>
-        <dd class ="invisible">In 2017, Great Smokey Mountains National Park had 11,388,893 visitors.</dd>
+        <dd class ="answers">In 2017, Great Smokey Mountains National Park had 11,388,893 visitors.</dd>
         <br>
         <dt class ="questions">How much does it cost to run these parks?</dt>
-        <dd class ="invisible">In 2017, the annual fiscal budget was $2.932 billion.</dd>
+        <dd class ="answers">In 2017, the annual fiscal budget was $2.932 billion.</dd>
         <br>
         <dt class ="questions">Can I camp out in the park?</dt>
-        <dd class ="invisible">Many national parks offer campsite availabilities.</dd>
+        <dd class ="answers">Many national parks offer campsite availabilities.</dd>
         <br>
         <dt class ="questions">Can I make reservations to camp in the park?</dt>
-        <dd class ="invisible">For camp reservations, please visit <a href="https://www.recreation.gov/">visitRecreation.gov</a>
+        <dd class ="answers">For camp reservations, please visit <a href="https://www.recreation.gov/" target=”_blank”>visitRecreation.gov</a>
         to see a list of parks that partake in the reservations program. Please note, not all parks take reservations.</dd>
         <br>
         <dt class ="questions">Can I bring my pet with me to the park?</dt>
-        <dd class ="invisible">Some parks do allow leashed pets on the developed grounds such as trails and
+        <dd class ="answers">Some parks do allow leashed pets on the developed grounds such as trails and
         campsites. Abandoning of pets is strictly prohibited.</dd>
         <br>
         <dt class ="questions">Where can I find more information on the pet policy for national parks?</dt>
-        <dd class ="invisible">Please visit <a href="https://www.nps.gov/subjects/pets/index.htm">NPS Pet Regulations</a>
+        <dd class ="answers">Please visit <a href="https://www.nps.gov/subjects/pets/index.htm" target=”_blank”>NPS Pet Regulations</a>
         to learn more about pets and parks.</dd>
         <br>
         <dt class ="questions">How many people does the National Park Service employ?</dt>
-        <dd class ="invisible">The National Park Service employs over 20,000 permanent, temporary, and seasonal employees</dd>
+        <dd class ="answers">The National Park Service employs over 20,000 permanent, temporary, and seasonal employees</dd>
         <br>
         <dt class ="questions">Can I volunteer at a national park?</dt>
-        <dd class ="invisible">Yes, please visit <a href="https://www.nps.gov/aboutus/workwithus.htm">Working with National Parks</a>
+        <dd class ="answers">Yes, please visit <a href="https://www.nps.gov/aboutus/workwithus.htm" target=”_blank”>Working with National Parks</a>
         to learn more about student and volunteer opportunities.</dd>
         <br>
         <dt class ="questions">Is it free to visit a national park?</dt>
-        <dd class ="invisible">Fewer than one third (1/3) of national parks charge an entrance fee.</dd>
+        <dd class ="answers">Fewer than one third (1/3) of national parks charge an entrance fee.</dd>
         <br>
         <dt class ="questions">Where can I learn more about a specific national park?</dt>
-        <dd class ="invisible">For more information about one of our specific parks, please visit us at
-        <a href="https://www.nps.gov/findapark/index.htm">our park search</a> to search our park database.</dd>
+        <dd class ="answers">For more information about one of our specific parks, please visit us at
+        <a href="https://www.nps.gov/findapark/index.htm" target=”_blank”>our park search</a> to search our park database.</dd>
 
     </dl>
+</div>
 
+<div class = "parkFacts">
+    <h3 class = "selected-1">Lake Meredith</h3>
+    <ul id="lake-meredith-facts">
+        <li>Located in Texas;</li>
+        <li>Inhabited by Red Foxes and Cottontail Rabbits;</li>
+        <li>No electricity available for camping; and</li>
+        <li>Park is free to enter.</li>
+    </ul>
+    <h3 class = "selected-2">Crater Lake</h3>
+    <ul id="crater-lake-facts">
+        <li>Located in Oregon;</li>
+        <li>Average annual snowfall is approximately 43 feet;</li>
+        <li>The lake is 1,943 feet deep; and</li>
+        <li>The hole was not made by a meteor, it is actually the result of a volcanic caldera.</li>
+    </ul>
+    <h3 class = "selected-3">Padre Island</h3>
+    <ul id="padre-island-facts">
+        <li>Located in Texas;</li>
+        <li>Free to enter but no camping reservations are taken and there is a camping permit;</li>
+        <li>Pet friendly but must be on a leash that is less than six feet; and</li>
+        <li>No lifeguard on duty. If pulled by a current, swim parallel to the current then swim back to shore
+        after you are free from the flow of the current.</li>
+    </ul>
+
+    <button id ="toggle-highlight">Banana the last item</button>
 
 </div>
 
-
-
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
+<script>
+    $('dd').addClass('invisible');
+
+    $('#toggleButton').click(function() {
+        $('dd').toggleClass('invisible');
+    });
+
+    $('dd').addClass('invisible');
+
+//toggle button to highlight last item in each list
+    $('#toggle-highlight').click(function() {
+        $('ul li:nth-child(4)').addClass('highlight');
+        });
+//bold contents under h3 when clicked
+    $('.selected-1').click(function() {
+        $('#lake-meredith-facts').children().css('font-weight', 'bold');
+    });
+    $('.selected-2').click(function() {
+        $('#crater-lake-facts').children().css('font-weight', 'bold');
+    });
+    $('.selected-3').click(function() {
+        $('#padre-island-facts').children().css('font-weight', 'bold');
+    });
+
+//first list item turns blue when any list item is clicked
+    $('li').click(function() {
+        $('ul li:nth-child(1)').css('color', 'blue');
+    });
+
+
+
+</script>
 </body>
 </html>
 
