@@ -35,30 +35,27 @@
     (function() {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
-        var mainHeader = document.getElementById('main-header');
-
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
         var listenerCool = function (event) {
+            var mainHeader = document.getElementById('main-header');
             mainHeader.innerHTML = "Javascript is Cool";
         };
             document.getElementById('btn1').addEventListener('click', listenerCool, false);
 
         // TODO: Uncomment the next line and get the sub header element by id
-        var subHeader = document.getElementById('sub-header');
-
         // TODO: Set the text color of subHeader to blue
         //Button to change color of subHeader to blue
         var subHeaderBlue = function (event) {
+            var subHeader = document.getElementById('sub-header');
             subHeader.style.color = '#0000FF';
         };
             document.getElementById('btn2').addEventListener('click', subHeaderBlue, false);
 
         // TODO: Uncomment the next line and get all list items
-        var listItems = document.getElementsByTagName('li');
-
         // TODO: Set text color on every other list item to grey
         // TODO: Set text color of li with dbid = 1 to blue
         var listColors = function (event) {
+            var listItems = document.getElementsByTagName('li');
             listItems[1].style.color = 'gray';
             listItems[3].style.color = 'gray';
             listItems[0].style.color = '#0000FF';
@@ -66,10 +63,9 @@
             document.getElementById('btn3').addEventListener('click', listColors, false);
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        var subParagraphs = document.getElementsByClassName('sub-paragraph');
-
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
         var missionAccomplished = function (event) {
+            var subParagraphs = document.getElementsByClassName('sub-paragraph');
             subParagraphs[0].innerText = "Mission Accomplished!";
         };
             document.getElementById('btn4').addEventListener('click', missionAccomplished, false);
