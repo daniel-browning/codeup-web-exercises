@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Blog</title>
+    <!--Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<style>
+
+    body {
+        background-color: #0e2364;
+        color: #9eabb0;
+    }
+    h1 {
+        color: #b9779a;
+    }
+    h2 {
+        color: #c6ab86;
+    }
+
+    img {
+        width: 500px;
+        display: inline-block;
+    }
+
+    a {
+        color: #3b4353;
+    }
+</style>
+</head>
+<body>
+
+<div class = "header-div text-center">
+<h1>My Blog: a #tbt to Livejournal</h1>
+
+<img class = "mx-auto" src = "img/disney-castle.jpg">
+</div>
+<div class = "container-fluid p-5" id = "posts">
+    <h2></h2>
+    <h6></h6>
+    <p></p>
+    <a href = "#"></a>
+</div>
+
+
+<!--ajax, jQuery and Bootstrap links -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="js/jquery.fireworks.js"></script>
+
+<script>
+
+    //get json objects
+
+    $.get("data/blog.json").done(function(data) {
+        console.log(data);
+    });
+
+    //Push blog entries from json to html
+
+    $(document).ready(function () {
+        $.getJSON("data/blog.json",
+            function (json) {
+                var post = [];
+                for (var i = 0; i < json.length; i++) {
+                    post.push("<h2>" + json[i].title + "</h2>");
+                    post.push("<h6>" + json[i].date + "</h6>");
+                    post.push("<p>" + json[i].content + "</p>");
+                    post.push("<a href = >" + json[i].categories + "</a>");
+                    post.push("</div>");
+                }
+                $('#posts').append($(post.join('')));
+            });
+        $('.header-div').fireworks({
+            sound: false, // sound effect
+            opacity: 0.1,
+            width: '10%',
+            height: '20%'
+        });
+    });
+    //fireworks borrowed from https://www.jqueryscript.net/animation/Realistic-Fireworks-Animations-Using-jQuery-And-Canvas-fireworks-js.html
+
+</script>
+</body>
+</html>
