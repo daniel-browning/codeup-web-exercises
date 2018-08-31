@@ -3,31 +3,31 @@
         "title": "Hammer",
         "quantity": 23,
         "categories": [
-            "tool"
+            "Tool"
         ],
         "price": 23
     }, {
         "title": "Drill",
         "quantity": 5,
         "categories": [
-            "tool",
-            "powered"
+            "Tool",
+            "Powered"
         ],
         "price": 100
     }, {
         "title": "Mower",
         "quantity": 5,
         "categories": [
-            "tool",
-            "gas",
-            "outdoor"
+            "Tool",
+            " Gas",
+            " Outdoor"
         ],
         "price": 200
     }, {
         "title": "Screwdrivers",
         "quantity": 25,
         "categories": [
-            "tool"
+            "Tool"
         ],
         "price": 10
     },
@@ -35,7 +35,7 @@
         "title": "Nail",
         "quantity": 33,
         "categories": [
-            "tool"
+            "Tool"
         ],
         "price": 3
     },
@@ -43,9 +43,8 @@
         "title": "Shovel",
         "quantity": 33,
         "categories": [
-            "outdoor",
-            "tool",
-            "snow"
+            "Outdoor",
+            " Tool"
         ],
         "price": 13
     }
