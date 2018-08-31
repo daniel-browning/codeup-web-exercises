@@ -18,7 +18,7 @@
 <!--Table -->
 <table class = "table" id="products">
     <thead>
-    <tr>
+    <tr class = "table-primary">
         <th>Title</th>
         <th>Quantity</th>
         <th>Price</th>
@@ -40,24 +40,30 @@
 <script>
     (function() {
         "use strict";
-        // TODO: Create an ajax GET request for /data/inventory.json
+        // TODO: Create an ajax GET request for data/inventory.json
+
+        // var listTools = function(tools, whereToPutThem) {
+        //     clears out whatever was there
+        //     $("#"+whereToPutThem).html("");
+        //     tools.forEach(function(tool, i) {
+                //var row = "<tr>";
+                //row += "<td>" + tool.title + "</td>"
+                //row += "<td>" + tool.quantity + "</td>"
+                //row += "<td>" + tool.price + "</td>"
+                //row += "<td>" + tool.categories.join(", ") + "</td>"
+                //row += "</tr>"
+                //$("#products").append(row);
+        //}
+
 //Get
-        let JSONobj = $.get("data/inventory.json", {
-            "title": "Hammer",
-            "quantity": 23,
-            "categories": [
-                "tool"
-            ],
-            "price": 23
-        }).done(function(data) {
+        $.get("data/inventory.json")
+        .done(function(data) {
             console.log(data);
         });
-
-
-        // TODO: Take the data from inventory.json and append it to the products table
-        //       HINT: Your data should come back as a JSON object; use console.log() to inspect
-        //             its contents and fields
-        //       HINT: You will want to target #insertProducts for your new HTML elements
+        //TODO: Take the data from inventory.json and append it to the products table
+        //HINT: Your data should come back as a JSON object; use console.log() to inspect
+        //its contents and fields
+        //HINT: You will want to target #insertProducts for your new HTML elements
         //Sample JSON Object (array of json objects)
 //Table
         $(document).ready(function () {
@@ -75,6 +81,19 @@
                     $('table').append($(tr.join('')));
                 });
         }); //end of function
+
+        //for each
+        //data.forEach(function(tool, i) {
+        //var row = "<tr>";
+        //row += "<td>" + tool.title + "</td>"
+        //row += "<td>" + tool.quantity + "</td>"
+        //row += "<td>" + tool.price + "</td>"
+        //row += "<td>" + tool.categories.join(", ") + "</td>"
+        //row += "</tr>"
+        //$("#products").append(row);
+        //})
+        //});
+
 
 //Button to reload data
         $('#page-reload').click(function(data) {
