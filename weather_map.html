@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weathermap API</title>
+    <style type="text/css">
+        /*#map-canvas {*/
+            /*width: 770px;*/
+            /*height: 481px;*/
+        /*}*/
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="show">
+<h1>Weather</h1>
+<h3></h3>
+<span id="error"></span>
+<button id="submitLocation">Refresh</button>
+</div>
+
+
+
+
+<!--jQuery links -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+
+    $(document).ready(function(){
+
+        $('#submitLocation').click(function(){
+                $.get({
+
+                    url: "http://api.openweathermap.org/data/2.5/weather?q=San&Antonio" + "&units=imperial" + "&APPID=2a5ee50540b2248f304ff1014f61d5b7",
+                    id:     4726206,
+                    dataType: "jsonp",
+                    success: function(data){
+                        console.log(data);
+
+                        var information = show(data);
+                        $("#show").html(information);
+                    }
+                });
+        });
+    });
+
+    function show(data) {
+        let weather = [];
+        for (var i = 0; i < data.length; i++) {
+            weather.push("<div>");
+            html.push('Weather: ', data.weather[0].description);
+            weather.push("<h3>" + data[i].temp + "</h3>");
+            weather.push("<h3>" + data[i].temp_min + " " + json[i].temp_max + "</h3>");
+            weather.push("<h3>" + data[i].clouds + "</h3>");
+            weather.push("<h3>" + data[i].list.clouds.all + "</h3>");
+            weather.push("<h3>" + data[i].list.main.humidity + "</h3>");
+            weather.push("</div>");
+        }
+        $('#show').append($(weather.join('')));
+    }
+
+
+
+
+
+// $(document).ready(function() {
+// $.getJSON("http://api.openweathermap.org/data/2.5/weather", {
+// APPID: "2a5ee50540b2248f304ff1014f61d5b7",
+//     id:     4726206,
+//     units: "imperial",
+//     lat:    29.423017,
+//     lon:   -98.48527,
+//     cnt: 3,
+// }).done(function (json) {
+//     let weather = [];
+//     for (var i = 0; i < json.length; i++) {
+//         weather.push("<div>");
+//         html.push('Weather: ', data.weather[0].description);
+//         weather.push("<p>" + json[i].temp + "</p>");
+//         weather.push("<p>" + json[i].temp_min + json[i].temp_max + "</p>");
+//         weather.push("<p>" + json[i].clouds + "</p>");
+//         weather.push("<p>" + json[i].lat + "</p>");
+//         weather.push("<p>" + json[i].lon + "</p>");
+//         weather.push("<p>" + json[i].list.clouds.all + "</p>");
+//         weather.push("<p>" + json[i].list.main.humidity + "</p>");
+//         weather.push("</div>");
+//     }
+//     $('#weather-widget').append($(weather.join('')));
+//     console.log(json);
+// });
+// });
+
+</script>
+</body>
+</html>
